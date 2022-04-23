@@ -12,9 +12,14 @@ export const styles = StyleSheet.create({
     fontSize: 30,
     fontWeight: 'bold',
   },
+  desc: {
+    fontSize: 20,
+    color: 'white',
+  },
   touchable: {
+    paddingHorizontal: 20,
     flex: 1,
-    borderRadius: 5,
+    borderRadius: 15,
     shadowColor: '#000',
     shadowOffset: {
       width: 0,

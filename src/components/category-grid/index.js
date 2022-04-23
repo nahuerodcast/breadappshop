@@ -19,7 +19,7 @@ const CategoryGrid = ({item, onSelected}) => {
         style={{...styles.touchable, ...{backgroundColor: item.color}}}
         onPress={() => onSelected(item)}>
         <View>
-          <Text style={styles.title}>{item.title}</Text>
+          <Text style={styles.desc}>{item.name}</Text>
         </View>
       </TouchableComponent>
     </View>
