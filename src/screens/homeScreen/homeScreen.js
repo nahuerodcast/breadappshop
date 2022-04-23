@@ -5,11 +5,11 @@ import {styles} from '../HomeScreen/styles';
 export const HomeScreen = ({navigation}) => {
   return (
     <SafeAreaView style={styles.container}>
-      <Text> HomeScreen</Text>
+      <Text style={styles.title}> Home screen</Text>
       <Button
         title="Go to categories"
         onPress={() => {
-          navigation.navigate('CategoriesScreen');
+          navigation.navigate('CategoriesScreen', {title: 'CategoriesScreen'});
         }}
       />
     </SafeAreaView>
