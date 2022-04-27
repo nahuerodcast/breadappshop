@@ -6,7 +6,12 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
   },
   title: {
-    fontSize: 30,
+    fontSize: 35,
     fontWeight: 'bold',
+  },
+  desc: {
+    color: '#13293D',
+    width: '60%',
+    textAlign: 'center',
   },
 });

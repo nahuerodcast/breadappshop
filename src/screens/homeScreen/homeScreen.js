@@ -1,4 +1,4 @@
-import {SafeAreaView, Text, Button, FlatList, View} from 'react-native';
+import {SafeAreaView, Text, FlatList, View} from 'react-native';
 import React from 'react';
 import {styles} from '../HomeScreen/styles';
 import {CATEGORIES} from '../../constants/categories';
@@ -18,7 +18,10 @@ export const HomeScreen = ({navigation}) => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.container} />
-      <Text style={styles.title}> Home screen 🥖</Text>
+      <Text style={styles.title}> Bread shop 🥖</Text>
+      <Text style={styles.desc}>
+        The best online shop for the best breads in your town
+      </Text>
       <FlatList
         data={CATEGORIES}
         keyExtractor={item => item.id}

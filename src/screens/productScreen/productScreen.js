@@ -24,7 +24,7 @@ export const ProductScreen = ({navigation, route}) => {
               title="Order Now 🥖"
               color={'white'}
               onPress={() => {
-                navigation.navigate('Home');
+                null;
               }}
             />
           </View>
