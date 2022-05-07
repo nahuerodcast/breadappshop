@@ -17,7 +17,7 @@ export const CategoriesScreen = ({navigation, route}) => {
   );
   const handleSelectCategory = product => {
     dispatch(selectProduct(product.id));
-    navigation.navigate('Product', {name: product.name});
+    navigation.navigate('ProductScreen', {name: product.name});
   };
   const renderItem = ({item}) => (
     <CategoryProducts item={item} onSelected={handleSelectCategory} />

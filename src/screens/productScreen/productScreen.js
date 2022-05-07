@@ -46,4 +46,4 @@ export const ProductScreen = ({navigation, route}) => {
   );
 };
 
-export default ProductScreen;
+export default connect()(ProductScreen);
