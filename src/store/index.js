@@ -1,10 +1,10 @@
-import {createStore, combineReducers} from 'redux';
+import {combineReducers, createStore} from 'redux';
 
 import categoryReducer from '../store/reducers/category.reducer';
 import productReducer from '../store/reducers/product.reducer';
 
 const rootReducer = combineReducers({
-  cateories: categoryReducer,
+  categories: categoryReducer,
   products: productReducer,
 });
 

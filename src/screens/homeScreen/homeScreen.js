@@ -1,13 +1,17 @@
 import {SafeAreaView, Text, FlatList, View} from 'react-native';
 import React from 'react';
 import {styles} from '../HomeScreen/styles';
-import {CATEGORIES} from '../../constants/categories';
 import CategoryGrid from '../../components/category-grid/index';
+import {useSelector, useDispatch, connect} from 'react-redux';
+import {selectedCategory} from '../../store/actions/category.actions';
 
 export const HomeScreen = ({navigation}) => {
+  const dispatch = useDispatch();
+  const categories = useSelector(state => state.categories.categories);
+
   const handleSelectCategory = category => {
+    dispatch(selectedCategory(category.id));
     navigation.navigate('CategoriesScreen', {
-      id: category.id,
       title: category.name,
     });
   };
@@ -23,7 +27,7 @@ export const HomeScreen = ({navigation}) => {
         The best online shop for the best breads in your town
       </Text>
       <FlatList
-        data={CATEGORIES}
+        data={categories}
         keyExtractor={item => item.id}
         renderItem={renderItem}
       />

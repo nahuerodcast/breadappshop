@@ -1,9 +1,10 @@
 import {View, Text, Button, Image} from 'react-native';
 import React from 'react';
 import {styles} from './styles';
+import {useSelector, connect} from 'react-redux';
 
 export const ProductScreen = ({navigation, route}) => {
-  const {product} = route.params;
+  const product = useSelector(state => state.products.selectedProduct);
   const {name, description, image, price, weight} = product;
   return (
     <View style={styles.container}>
