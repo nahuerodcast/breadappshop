@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, FlatList, Button} from 'react-native';
+import {View, Text, FlatList, TouchableOpacity} from 'react-native';
 import {connect, useSelector, useDispatch} from 'react-redux';
 import CartItem from '../../components/cart-item/index';
 import {confirmCart, removeItem} from '../../store/actions/cart.action';
@@ -30,11 +30,13 @@ const CartScreen = ({navigation}) => {
           renderItem={renderItem}
         />
       </View>
-      <Button
-        title="Confirm"
+
+      <TouchableOpacity
         onPress={() => handleConfirmCart()}
-        color="#212121"
-      />
+        style={styles.button}>
+        <Text style={styles.desc}>Confirm</Text>
+      </TouchableOpacity>
+
       <View style={styles.footer}>
         <Text style={styles.total}>Total:</Text>
         <Text style={styles.totalPrice}>${total}</Text>

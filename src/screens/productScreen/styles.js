@@ -1,5 +1,10 @@
 import {StyleSheet} from 'react-native';
 export const styles = StyleSheet.create({
+  mainContainer: {
+    flex: 0.95,
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+  },
   container: {
     justifyContent: 'center',
     marginHorizontal: 20,
@@ -37,6 +42,11 @@ export const styles = StyleSheet.create({
     color: '#13293D',
     fontSize: 12,
   },
+  cartDesc: {
+    color: 'white',
+    fontSize: 20,
+    textAlign: 'center',
+  },
   price: {
     fontSize: 15,
     fontWeight: 'bold',
@@ -52,6 +62,22 @@ export const styles = StyleSheet.create({
     backgroundColor: '#E8F1F2',
     borderRadius: 15,
     paddingHorizontal: 10,
+  },
+  cartButton: {
+    backgroundColor: '#006494',
+    borderRadius: 15,
+    margin: 5,
+    marginHorizontal: 20,
+    borderColor: 'gray',
+    padding: 15,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
   },
   orderButton: {
     marginTop: 20,

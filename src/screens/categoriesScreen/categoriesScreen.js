@@ -1,7 +1,6 @@
 import {View, SafeAreaView, FlatList} from 'react-native';
 import React, {useEffect} from 'react';
 import {styles} from './styles';
-import {PRODUCTS} from '../../constants/products';
 import CategoryProducts from '../../components/category-products/index';
 import {useSelector, useDispatch} from 'react-redux';
 import {
