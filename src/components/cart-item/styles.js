@@ -4,9 +4,7 @@ export const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
-  header: {
-    fontFamily: 'OpenSans-Bold',
-  },
+  header: {},
   name: {
     fontSize: 20,
     color: '#212121',
@@ -20,11 +18,9 @@ export const styles = StyleSheet.create({
   },
   quantity: {
     fontSize: 16,
-    fontFamily: 'OpenSans-Regular',
   },
   price: {
     fontSize: 16,
-    fontFamily: 'OpenSans-Regular',
     color: '#212121',
   },
 });

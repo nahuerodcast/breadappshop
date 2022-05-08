@@ -1,11 +1,17 @@
 import {View, Text, Button, Image} from 'react-native';
 import React from 'react';
 import {styles} from './styles';
-import {useSelector, connect} from 'react-redux';
+import {useSelector, connect, useDispatch} from 'react-redux';
+import {addItem} from '../../store/actions/cart.action';
 
 export const ProductScreen = ({navigation, route}) => {
+  const dispatch = useDispatch();
+
   const product = useSelector(state => state.products.selectedProduct);
   const {name, description, image, price, weight} = product;
+
+  const handleAddToCart = () => dispatch(addItem(product));
+
   return (
     <View style={styles.container}>
       <Image
@@ -25,7 +31,8 @@ export const ProductScreen = ({navigation, route}) => {
               title="Order Now 🥖"
               color={'white'}
               onPress={() => {
-                null;
+                handleAddToCart();
+                navigation.navigate('CartScreen');
               }}
             />
           </View>

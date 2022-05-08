@@ -9,7 +9,7 @@ const CartScreen = ({navigation}) => {
   const dispatch = useDispatch();
   const items = useSelector(state => state.cart.items);
   const total = useSelector(state => state.cart.total);
-  const user = useSelector(state => state.auth.userId);
+  const user = useSelector(state => state.cart.userId);
 
   const handleDeleteItem = id => dispatch(removeItem(id));
 

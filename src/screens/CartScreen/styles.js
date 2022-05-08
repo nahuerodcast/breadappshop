@@ -22,13 +22,11 @@ export const styles = StyleSheet.create({
   },
   total: {
     fontSize: 18,
-    fontFamily: 'OpenSans-Regular',
     padding: 8,
     color: '#212121',
   },
   totalPrice: {
     fontSize: 16,
-    fontFamily: 'OpenSans-Bold',
     padding: 8,
     color: colors.primaryColor,
   },
