@@ -1,32 +1,50 @@
 import React from 'react';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import HomeScreen from '../screens/HomeScreen/HomeScreen';
-import CategoriesScreen from '../screens/CategoriesScreen/CategoriesScreen';
-import ProductScreen from '../screens/ProductScreen/ProductScreen';
-import CartScreen from '../screens/CartScreen/CartScreen';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import CartNavigator from './cart';
+import OrderNavigator from './order';
+import ShopNavigator from './shop';
+import IonicIcons from 'react-native-vector-icons/Ionicons';
 
-const Stack = createNativeStackNavigator();
+const TabStack = createBottomTabNavigator();
 
 const MainNavigator = () => {
   return (
-    <Stack.Navigator initialRouteName="Home" screenOptions={{}}>
-      <Stack.Screen
-        name="Home"
-        component={HomeScreen}
-        options={{headerShown: false}}
+    <TabStack.Navigator
+      initialRouteName="ShopStack"
+      screenOptions={{
+        headerShown: false,
+      }}>
+      <TabStack.Screen
+        name="ShopStack"
+        component={ShopNavigator}
+        options={{
+          tabBarIcon: ({focused}) => (
+            <IonicIcons name={focused ? 'home' : 'home-outline'} size={20} />
+          ),
+          title: 'Shop',
+        }}
       />
-      <Stack.Screen
-        name="CategoriesScreen"
-        component={CategoriesScreen}
-        options={({route}) => ({title: route.params.title})}
+      <TabStack.Screen
+        name="CartStack"
+        component={CartNavigator}
+        options={{
+          tabBarIcon: ({focused}) => (
+            <IonicIcons name={focused ? 'cart' : 'cart-outline'} size={20} />
+          ),
+          title: 'Cart',
+        }}
       />
-      <Stack.Screen
-        name="ProductScreen"
-        component={ProductScreen}
-        options={({route}) => ({title: route.params.name})}
+      <TabStack.Screen
+        name="OrderStack"
+        component={OrderNavigator}
+        options={{
+          tabBarIcon: ({focused}) => (
+            <IonicIcons name={focused ? 'list' : 'list-outline'} size={20} />
+          ),
+          title: 'Order',
+        }}
       />
-      <Stack.Screen name="CartScreen" component={CartScreen} />
-    </Stack.Navigator>
+    </TabStack.Navigator>
   );
 };
 

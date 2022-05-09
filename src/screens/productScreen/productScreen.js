@@ -34,7 +34,7 @@ export const ProductScreen = ({navigation, route}) => {
                 color={'white'}
                 onPress={() => {
                   handleAddToCart();
-                  navigation.navigate('CartScreen');
+                  navigation.navigate('CartStack');
                 }}
               />
             </View>
@@ -45,7 +45,7 @@ export const ProductScreen = ({navigation, route}) => {
                 title="Go to home🏠"
                 color={'black'}
                 onPress={() => {
-                  navigation.navigate('Home');
+                  navigation.navigate('HomeScreen');
                 }}
               />
             </View>
@@ -54,7 +54,7 @@ export const ProductScreen = ({navigation, route}) => {
       </View>
       <TouchableOpacity
         onPress={() => {
-          navigation.navigate('CartScreen');
+          navigation.navigate('CartStack');
         }}
         style={styles.cartButton}>
         <Text style={styles.cartDesc}>View Cart</Text>

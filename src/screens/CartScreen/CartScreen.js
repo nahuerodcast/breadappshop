@@ -9,12 +9,13 @@ const CartScreen = ({navigation}) => {
   const dispatch = useDispatch();
   const items = useSelector(state => state.cart.items);
   const total = useSelector(state => state.cart.total);
-  const user = useSelector(state => state.cart.userId);
+  const user = useSelector(state => state.auth.userId);
 
   const handleDeleteItem = id => dispatch(removeItem(id));
 
   const handleConfirmCart = () => {
     dispatch(confirmCart(items, total, user));
+    navigation.navigate('OrderStack');
   };
 
   const renderItem = ({item}) => (

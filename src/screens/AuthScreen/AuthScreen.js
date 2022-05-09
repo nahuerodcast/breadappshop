@@ -80,7 +80,6 @@ const AuthScreen = ({navigation}) => {
 
         <TouchableOpacity
           onPress={() => handleAuth()}
-         
           color={colors.primaryColor}
           style={styles.linkButton}>
           <Text style={styles.linkButtonText}>
