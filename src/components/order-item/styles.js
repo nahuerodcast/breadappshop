@@ -12,7 +12,6 @@ export const styles = StyleSheet.create({
   },
   date: {
     fontSize: 20,
-    fontFamily: 'OpenSans-Bold',
     color: colors.textColor,
   },
   details: {

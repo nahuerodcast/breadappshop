@@ -24,8 +24,6 @@ export const getOrders = user => {
 
       const result = await response.json();
 
-      console.warn(result);
-
       const orders = orderByUser(result, user);
 
       dispatch({
@@ -49,8 +47,6 @@ export const removeOrder = orderId => {
       });
 
       const result = await response.json();
-
-      console.warn(result);
 
       dispatch({
         type: REMOVE_ORDER,

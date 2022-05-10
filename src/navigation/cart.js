@@ -21,7 +21,7 @@ const CartNavigator = () => {
           fontSize: 17,
         },
       }}>
-      <Stack.Screen name="CartScreen" component={CartScreen} />
+      <Stack.Screen name="Cart" component={CartScreen} />
     </Stack.Navigator>
   );
 };

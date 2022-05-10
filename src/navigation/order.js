@@ -21,7 +21,7 @@ const OrderNavigator = () => {
           fontSize: 17,
         },
       }}>
-      <Stack.Screen name="OrderScreen" component={OrderScreen} />
+      <Stack.Screen name="Order" component={OrderScreen} />
     </Stack.Navigator>
   );
 };

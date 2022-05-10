@@ -16,8 +16,6 @@ export const signup = (email, password) => {
 
       const result = await response.json();
 
-      console.warn(result);
-
       dispatch({
         type: SIGNUP,
         token: result.idToken,
@@ -40,8 +38,6 @@ export const signin = (email, password) => {
     });
 
     const result = await response.json();
-
-    console.warn(result);
 
     dispatch({
       type: SIGNIN,
